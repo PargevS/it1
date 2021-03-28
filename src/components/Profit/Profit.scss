@@ -1,0 +1,132 @@
+.form__take-profit{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.7em 0 0 0;
+
+  & > .take-profit__switch span{font-size: 0.85em;font-weight: 400;color: #ffffff;}
+
+  & > .take-profit__switch{
+    padding: 0.6em calc(0.7em + 5px);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 0.7em 0;
+    background: #2c273d;
+  }
+
+  & > .take-profit__switch .switch{
+    width: 42px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+
+    & > input{opacity: 0;}
+
+    & > .switch__toggle{
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #4F4F55;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 500ms ease;
+      padding: 0 3px;
+
+      &:after{
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: rgba(255, 255, 255, 0.75);;
+        position: relative;
+        border-radius: 50%;
+        transition: all 500ms ease;
+      }
+    }
+
+    & > .switch__toggle.enable{
+      background:  #0078FF;
+      &:after{transform: translateX(18px)}
+    }
+
+    & > .switch__toggle.disable{background: #4F4F55;}
+
+  }
+
+}
+
+.form__take-profit .take-profit__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 0.75em 1em 0.75em;
+
+  .take-profit__titles,   .take-profit__inputs, .take-profit__projected-profit{
+    width: 100%;
+    margin-bottom: 0.7em;
+  }
+
+  .take-profit__titles{
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, .5);
+    font-weight: 400;
+    position: relative;
+
+    & > span{display: inline-block;margin-right: 5%;}
+    & > span:nth-child(1){width: 22%;}
+    & > span:nth-child(2){width: 35%}
+    & > span:nth-child(3){margin-right: 0;width: 33%}
+  }
+
+
+
+  .take-profit__projected-profit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, .5);
+
+    .take-profit__projected-profit-value span:nth-child(1){color: #ffffff;}
+  }
+
+  .add-item{
+    width: 100%;
+    margin-bottom: 0.7em;
+
+    button {
+      width: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: transparent;
+      border: none;
+      color: #0078FF;
+      cursor: pointer;
+      font-size: 0.85em;
+      font-weight: 400;
+      outline: none;
+      transition: fill 300ms ease;
+
+      & > svg{
+        height: 1.25em; margin-right: 0.8em;
+        path{fill: #0078FF; transition: fill 300ms ease;}
+      }
+
+      &:hover{
+        color: lighten(#0078FF, 8%);
+        path{fill: lighten(#0078FF, 8%);}
+      }
+    }
+  }
+}
+

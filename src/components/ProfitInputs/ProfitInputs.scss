@@ -1,0 +1,36 @@
+.take-profit__inputs{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  width: 100%;
+
+  .profit, .trade-price, .amount-to-sell{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    font-size: 14px;
+    background-color: transparent!important;
+    color: rgba(255, 255, 255, .5);
+
+    span:nth-child(1){color: #ffffff;}
+  }
+
+  .profit{max-width: 20%; margin-right: 5%;}
+  .trade-price{max-width: 47%; min-width: 30%;margin-right: 5%;}
+  .amount-to-sell{max-width: 24%; min-width: 20%;margin-right: 5%;}
+
+  .take-profit__cancel{
+    width: 15%;
+    color: #95939e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    svg{max-width: 15px}
+  }
+}

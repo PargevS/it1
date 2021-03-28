@@ -1,0 +1,30 @@
+.form_trade {
+  width: 300px;
+  background: #231f30;
+  padding: 0.7em 0;
+  font-size: 16px;
+  transition: height 300ms ease;
+}
+
+.form_trade {
+  .form__title, .form__type-switch, .form__price, .form__amount, .form__total {
+    margin: 0.7em 0.75em;
+    width: calc(100% - 1.4em);
+  }
+
+  .form__title{font-size: 16px; font-weight: 400;color: #ffffff; margin-top: 0;}
+
+
+}
+
+.form_trade .form__type-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_trade .submit{
+  position: relative;
+  width: calc(100% - 1.4em);
+  margin: 0 0.7em;
+}
